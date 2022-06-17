@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name][contenthash].js",
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Dad Joke Generator",
       filename: "index.html",
-      template:"src/template.html"
+      template: "src/template.html",
     }),
   ],
 };
